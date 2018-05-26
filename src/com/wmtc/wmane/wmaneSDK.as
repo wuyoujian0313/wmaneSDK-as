@@ -12,7 +12,7 @@
 	{
 		private static var _instance:wmaneSDK;
 		private static var _extContext:ExtensionContext;
-		private static var APPSTRING:String = 'com.wmtc.wmane'
+		private static var APPSTRING:String = 'com.wmtc.wmane';
 			
 		// API定义
 		private static const LOGIN_FUNCTION_QQ:String = "login_function_qq";//qq登录授权
@@ -122,20 +122,26 @@
 		// 北汽高级维修
 		// platform = 0，微信 ； = 1 QQ
 		var jsonText:String = "[" +
-		"{\"appId\":\"wx828ddb181a65570c\",\"appSecret\":\"*d2f36fee5809ea6d1909ff56e29f1e83*\",\"platform\":0}," +
-		"{\"appId\":\"1106131684\",\"appSecret\":\"7kuxHSwsLybdLQ5O\",\"platform\":1}]";
+		"{\"appId\":\"wx828ddb181a65570c\",\"appSecret\":\"*d2f36fee5809ea6d1909ff56e29f1e83*\",\"platform\":"0"}," +
+		"{\"appId\":\"1106131684\",\"appSecret\":\"7kuxHSwsLybdLQ5O\",\"platform\":"1"}]";
 		
 		// 北汽维护
 		// platform = 0，微信 ； = 1 QQ
 		var jsonText:String = "[" +
-		"{\"appId\":\"wx78bf5210b6ebf466\",\"appSecret\":\"*d2f36fee5809ea6d1909ff56e29f1e83*\",\"platform\":0}," +
-		"{\"appId\":\"1106347438\",\"appSecret\":\"NT66deIQ4RNl5gDA\",\"platform\":1}]";
+		"{\"appId\":\"wx78bf5210b6ebf466\",\"appSecret\":\"*d2f36fee5809ea6d1909ff56e29f1e83*\",\"platform\":"0"}," +
+		"{\"appId\":\"1106347438\",\"appSecret\":\"NT66deIQ4RNl5gDA\",\"platform\":"1"}]";
 		
 		// 北汽电机知识
 		// platform = 0，微信 ； = 1 QQ
 		var jsonText:String = "[" +
-		"{\"appId\":\"wxf74876d011fb1356\",\"appSecret\":\"*fedba484c5f88fc3398eee6bda007dce*\",\"platform\":0}," +
-		"{\"appId\":\"1106060269\",\"appSecret\":\"OR7B2A2kRZC6riPH\",\"platform\":1}]";
+		"{\"appId\":\"wxf74876d011fb1356\",\"appSecret\":\"*fedba484c5f88fc3398eee6bda007dce*\",\"platform\":"0"}," +
+		"{\"appId\":\"1106060269\",\"appSecret\":\"OR7B2A2kRZC6riPH\",\"platform\":"1"}]";
+		
+		// 百树习字
+		// platform = 0，微信 ；  = 1 QQ
+		var jsonText:String = "[" +
+		"{\"appId\":\"wx2317aa2cd17ff337\",\"appSecret\":\"*31c0e1af0baae6fb14717a7428b6e343*\",\"platform\":"0"}," +
+		"{\"appId\":\"1106827023\",\"appSecret\":\"Xa546RrBUxSol9VN\",\"platform\":"1"}]";
 		*/
 	
 		public function registerShareSDKs(jsonText:String):void
