@@ -43,7 +43,7 @@
 			{
 				_instance=new wmaneSDK();
 					
-				_extContext=ExtensionContext.createExtensionContext(APPSTRING, "wmaneSDK");
+				_extContext=ExtensionContext.createExtensionContext(APPSTRING, "");
 				if (!_extContext)
 				{
 					trace("ERROR - Extension context is null. Please check if extension.xml is setup correctly.");
@@ -56,14 +56,12 @@
 			}
 			return _instance;
 		}
-
 		
 		protected function systemInvoke(event:InvokeEvent):void
 		{
 			if(event.arguments.length>0){
 				var url:String = event.arguments[0] as String;
 			}
-			
 		}
 		
 		protected function statusHandler(event:StatusEvent):void
@@ -92,7 +90,7 @@
 		}
 		
 		/*
-		var jsonText:String = "{\"goodsDesc\":\"描述\",\"goodsName\":\"名称\",\"orderNo\":\"123321\",\"price\":\"12.0\",\"scheme\":\"alipayXXXX"\};
+		var jsonText:String = "{\"goodsDesc\":\"描述\",\"goodsName\":\"名称\",\"orderNo\":\"123321\",\"price\":\"12.0\",\"scheme\":\"alipay2018010401582123\"}";
 		*/
 		public function alipay(jsonText:String):void
 		{
@@ -100,7 +98,7 @@
 		}
 		
 		/*
-		var jsonText:String = "{\"goodsDesc\":\"描述\",\"goodsName\":\"名称\",\"orderNo\":\"123321\",\"price\":\"12.0\",\"scheme\":\"alipayXXXX"\};
+		var jsonText:String = "{\"goodsDesc\":\"描述\",\"goodsName\":\"名称\",\"orderNo\":\"123321\",\"price\":\"12.0\",\"scheme\":\"wx2317aa2cd17ff337\"};
 		*/
 		public function wxpay(jsonText:String):void
 		{
@@ -119,29 +117,18 @@
 		}
 		
 		/*
-		// 北汽高级维修
 		// platform = 0，微信 ； = 1 QQ
-		var jsonText:String = "[" +
-		"{\"appId\":\"wx828ddb181a65570c\",\"appSecret\":\"*d2f36fee5809ea6d1909ff56e29f1e83*\",\"platform\":"0"}," +
-		"{\"appId\":\"1106131684\",\"appSecret\":\"7kuxHSwsLybdLQ5O\",\"platform\":"1"}]";
+		// 北汽高级维修
+		var jsonText:String = "[{\"appId\":\"wx828ddb181a65570c\",\"appSecret\":\"d2f36fee5809ea6d1909ff56e29f1e83\",\"platform\":0},{\"appId\":\"1106131684\",\"appSecret\":\"7kuxHSwsLybdLQ5O\",\"platform\":1}]";
 		
 		// 北汽维护
-		// platform = 0，微信 ； = 1 QQ
-		var jsonText:String = "[" +
-		"{\"appId\":\"wx78bf5210b6ebf466\",\"appSecret\":\"*d2f36fee5809ea6d1909ff56e29f1e83*\",\"platform\":"0"}," +
-		"{\"appId\":\"1106347438\",\"appSecret\":\"NT66deIQ4RNl5gDA\",\"platform\":"1"}]";
+		var jsonText:String = "[{\"appId\":\"wx78bf5210b6ebf466\",\"appSecret\":\"d2f36fee5809ea6d1909ff56e29f1e83\",\"platform\":0},{\"appId\":\"1106347438\",\"appSecret\":\"NT66deIQ4RNl5gDA\",\"platform\":1}]";
 		
 		// 北汽电机知识
-		// platform = 0，微信 ； = 1 QQ
-		var jsonText:String = "[" +
-		"{\"appId\":\"wxf74876d011fb1356\",\"appSecret\":\"*fedba484c5f88fc3398eee6bda007dce*\",\"platform\":"0"}," +
-		"{\"appId\":\"1106060269\",\"appSecret\":\"OR7B2A2kRZC6riPH\",\"platform\":"1"}]";
+		var jsonText:String = "[{\"appId\":\"wxf74876d011fb1356\",\"appSecret\":\"fedba484c5f88fc3398eee6bda007dce\",\"platform\":0},{\"appId\":\"1106060269\",\"appSecret\":\"OR7B2A2kRZC6riPH\",\"platform\":1}]";
 		
 		// 百树习字
-		// platform = 0，微信 ；  = 1 QQ
-		var jsonText:String = "[" +
-		"{\"appId\":\"wx2317aa2cd17ff337\",\"appSecret\":\"*31c0e1af0baae6fb14717a7428b6e343*\",\"platform\":"0"}," +
-		"{\"appId\":\"1106827023\",\"appSecret\":\"Xa546RrBUxSol9VN\",\"platform\":"1"}]";
+		var jsonText:String = "[{\"appId\":\"wx2317aa2cd17ff337\",\"appSecret\":\"31c0e1af0baae6fb14717a7428b6e343\",\"platform\":0},{\"appId\":\"1106827023\",\"appSecret\":\"Xa546RrBUxSol9VN\",\"platform\":1}]";		
 		*/
 	
 		public function registerShareSDKs(jsonText:String):void
