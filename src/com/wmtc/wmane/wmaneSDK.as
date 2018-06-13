@@ -30,6 +30,7 @@
 		private static const SHARING_FUNCTION_IS_INSTALLED:String = "sharing_function_is_installed";
 		private static const PLAY_FUNCTION:String = "playAV";
 		private static const PLAY_FUNCTION_LOCAL:String = "playAVForLocal";
+		private static const ALIPAYSANDBOX_FUNCTION:String = "alipaySandbox";
 		
 		public function wmaneSDK(target:IEventDispatcher=null)
 		{
@@ -67,6 +68,12 @@
 		{
 			dispatchEvent(event);
 		}
+		
+		public function alipaySandbox():void
+		{
+			_extContext.call(ALIPAYSANDBOX_FUNCTION);
+		}
+		
 		
 		public function login_wx():void
 		{
